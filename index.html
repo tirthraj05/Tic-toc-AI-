@@ -4,41 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense verification code -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684497993088728"
+        crossorigin="anonymous"></script>
+
+    <!-- Basic SEO -->
+    <title>Play Tic Tac Toe Online vs Computer | Free Browser Game</title>
+    <meta name="description"
+        content="Play free Tic Tac Toe online in your browser. Challenge an AI opponent, enjoy a clean design, and reset the game anytime. Created by Tirthraj Gajera.">
+    <meta name="keywords"
+        content="tic tac toe online, play tic tac toe, tic tac toe vs computer, free browser game, XO game">
+    <meta name="robots" content="index,follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tic-toc-ai-eta.vercel.app/">
+
+    <!-- Open Graph (for WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="Play Tic Tac Toe Online vs Computer | Free Browser Game">
+    <meta property="og:description"
+        content="Enjoy a simple and fast Tic Tac Toe game in your browser. Play against an AI opponent and restart anytime.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tic-toc-ai-eta.vercel.app/">
+    <!-- Replace this with your real image URL if you have a preview image -->
+    <meta property="og:image" content="https://tic-toc-ai-eta.vercel.app/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Play Tic Tac Toe Online vs Computer | Free Browser Game">
+    <meta name="twitter:description"
+        content="Free online Tic Tac Toe game. Play X and O against the computer with a clean and minimal interface.">
+    <meta name="twitter:image" content="https://tic-toc-ai-eta.vercel.app/og-image.png">
+
+    <!-- Structured Data (Schema.org: Game) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Tic Tac Toe Online",
+      "description": "A free online Tic Tac Toe (X and O) browser game where you can play against a simple AI opponent.",
+      "author": {
+        "@type": "Person",
+        "name": "Tirthraj Gajera"
+      },
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "url": "https://tic-toc-ai-eta.vercel.app/"
+    }
+    </script>
+
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="tic.css">
-    <title>Tic Tac Toe</title>
 </head>
 
 <body>
-    <div id="main">
+    <main id="main" aria-label="Tic Tac Toe Game">
         <h1>TIC TAC TOE</h1>
         <p id="ins">
-            This game was made by <b>Tirthraj Gajera</b>.<br><br> 🤑Let's play & Enjoy🤑
+            This game was made by <b>Tirthraj Gajera</b>. <br><br>
+            Let's play & enjoy Tic Tac Toe online against the computer.
         </p>
-        <div class="ui">
+
+        <div class="ui" aria-label="Tic Tac Toe board">
             <div class="row">
-                <input type="text" id="b1" class="cell" onclick="makeMove(this, 0);" readonly>
-                <input type="text" id="b2" class="cell" onclick="makeMove(this, 1);" readonly>
-                <input type="text" id="b3" class="cell" onclick="makeMove(this, 2);" readonly>
+                <input type="text" id="b1" class="cell" onclick="makeMove(this, 0);" readonly aria-label="Cell 1">
+                <input type="text" id="b2" class="cell" onclick="makeMove(this, 1);" readonly aria-label="Cell 2">
+                <input type="text" id="b3" class="cell" onclick="makeMove(this, 2);" readonly aria-label="Cell 3">
             </div>
             <div class="row">
-                <input type="text" id="b4" class="cell" onclick="makeMove(this, 3);" readonly>
-                <input type="text" id="b5" class="cell" onclick="makeMove(this, 4);" readonly>
-                <input type="text" id="b6" class="cell" onclick="makeMove(this, 5);" readonly>
+                <input type="text" id="b4" class="cell" onclick="makeMove(this, 3);" readonly aria-label="Cell 4">
+                <input type="text" id="b5" class="cell" onclick="makeMove(this, 4);" readonly aria-label="Cell 5">
+                <input type="text" id="b6" class="cell" onclick="makeMove(this, 5);" readonly aria-label="Cell 6">
             </div>
             <div class="row">
-                <input type="text" id="b7" class="cell" onclick="makeMove(this, 6);" readonly>
-                <input type="text" id="b8" class="cell" onclick="makeMove(this, 7);" readonly>
-                <input type="text" id="b9" class="cell" onclick="makeMove(this, 8);" readonly>
+                <input type="text" id="b7" class="cell" onclick="makeMove(this, 6);" readonly aria-label="Cell 7">
+                <input type="text" id="b8" class="cell" onclick="makeMove(this, 7);" readonly aria-label="Cell 8">
+                <input type="text" id="b9" class="cell" onclick="makeMove(this, 8);" readonly aria-label="Cell 9">
             </div>
         </div>
+
         <button id="resetBtn" onclick="resetGame()">RESET</button>
         <p id="print"></p>
-    </div>
+
+        <!-- Extra text for SEO -->
+        <section aria-label="How to play Tic Tac Toe">
+            <h2>How to Play Tic Tac Toe Online</h2>
+            <p>
+                Tic Tac Toe is a simple strategy game played on a 3 x 3 grid. You play as <strong>X</strong> and the
+                computer plays as <strong>O</strong>. Tap any empty box to place your move. The first player to get
+                three marks in a row horizontally, vertically or diagonally wins the game.
+            </p>
+            <p>
+                This version of Tic Tac Toe runs directly in your browser, works on mobile and desktop, and lets you
+                reset the board instantly.
+            </p>
+        </section>
+    </main>
 
     <!-- Popup for Congratulations -->
     <div id="congratsPopup" class="popup">
         <div class="popup-content">
-            <h2>🥳Congratulations!🥳</h2>
+            <h2>Congratulations!</h2>
             <p id="winnerMessage"></p>
             <button onclick="closePopup()">Close</button>
         </div>
